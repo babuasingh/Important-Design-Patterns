@@ -2,7 +2,7 @@
     When object creation is expensive or time-consuming.
     When you need to create many copies of similar objects.
     To clone existing objects instead of building new ones from scratch. */
-class User implements Cloneable {
+class UserProto implements Cloneable {
     private String name;
     private String email;
 
@@ -13,9 +13,9 @@ class User implements Cloneable {
         this.email = email;
     }
 
-    public User clone(){
+    public UserProto clone(){
         try {
-            return (User) super.clone();
+            return (UserProto) super.clone();
         } catch (CloneNotSupportedException e) {
            return null;
         }
@@ -31,11 +31,11 @@ class User implements Cloneable {
 
 public class Prototype {
     public static void main(String[] args) {
-        User one=new User();
+        UserProto one=new UserProto();
         one.setName("sidd");
         System.out.println(one);
 
-        User two= one.clone();
+        UserProto two= one.clone();
         two.setEmail("siddemail.com");
         System.out.println(two);
     }

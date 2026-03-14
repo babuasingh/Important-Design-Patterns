@@ -7,6 +7,8 @@ When to use the Proxy Pattern
 
 import java.util.List;
 import java.util.ArrayList;
+
+
 interface Internet{
     void connectTo(String hostname);
 }

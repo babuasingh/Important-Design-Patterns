@@ -1,7 +1,7 @@
 /*
 When to use the Factory Pattern
     When object creation logic is complex or involves decision-making.
-    When you want to create objects without exposing the actual class.
+    When you want to create objects without exposing the actual object creation logic.
     When you need loose coupling between client code and actual implementations.
 */
 

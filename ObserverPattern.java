@@ -4,6 +4,12 @@ import java.util.*;
     When multiple objects need to be notified when one object changes.
     In event-driven systems like GUIs, chat apps, or notification systems.
     When implementing publish-subscribe behavior.
+    * Components of Observer Pattern
+                        Component	        Role
+                        Subject	        ->  The object being observed
+                        Observer	    ->  Objects that want updates
+                        ConcreteSubject	-> Actual implementation of subject
+                        ConcreteObserver -> Actual observer implementation
  */
 
 
