@@ -27,11 +27,25 @@ interface subject {
     void notifyAllObservers(String update);
 }
 
-// the observer
-class Subscriber implements Observer {
+// the observer 1
+class Subscriber1 implements Observer {
     private String name;
 
-    Subscriber(String name) {
+    Subscriber1(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public void updateObserver(String message) {
+        System.out.println(name + " you have a new message -> " + message);
+    }
+}
+
+// the observer 2
+class Subscriber2 implements Observer {
+    private String name;
+
+    Subscriber2(String name) {
         this.name = name;
     }
 
@@ -79,16 +93,14 @@ class YoutubeChannel implements subject {
 public class ObserverPattern {
     public static void main(String[] args) {
         YoutubeChannel channel = new YoutubeChannel("Coding Shuttle");
-        Subscriber sam = new Subscriber("sam");
-        Subscriber robin = new Subscriber("robin");
-        Subscriber muler = new Subscriber("muler");
-        channel.addObserver(sam);
-        channel.addObserver(robin);
-        channel.addObserver(muler);
+        Subscriber1 subscriber1 = new Subscriber1("sam");
+        Subscriber2 subscriber2 = new Subscriber2("robin");
+        channel.addObserver(subscriber1);
+        channel.addObserver(subscriber2);
 
         channel.updateWithAEvent("New Video of Core Java released to the channel , check it out");
 
-        channel.removeObserver(robin);
+        channel.removeObserver(subscriber2);
 
         channel.updateWithAEvent("Spring boot playlist updated ,check it out");
     }
