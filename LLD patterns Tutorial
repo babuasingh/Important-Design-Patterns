@@ -19,3 +19,4 @@ Examples of Behavioral Patterns:
 1. Strategy Pattern:     When you need to choose behavior/algorithm at runtime. To eliminate long if-else or switch statements.
 2. Observer Pattern:    When you want to notify multiple objects about any events that happen to the object they are observing. To implement distributed event handling systems.
 3. Command Pattern:     When you want to parameterize objects with operations. To support undoable operations. To queue operations for later execution.
+4. State Pattern:       When an object's behavior depends on its state, and it must change its behavior at runtime depending on that state.
