@@ -18,15 +18,6 @@ interface Observer {
     void updateObserver(String message);
 }
 
-// the subject should implement this methods
-interface subject {
-    void addObserver(Observer observer);
-
-    void removeObserver(Observer observer);
-
-    void notifyAllObservers(String update);
-}
-
 // the observer 1
 class Subscriber1 implements Observer {
     private String name;
@@ -53,6 +44,15 @@ class Subscriber2 implements Observer {
     public void updateObserver(String message) {
         System.out.println(name + " you have a new message -> " + message);
     }
+}
+
+// the subject should implement this methods
+interface subject {
+    void addObserver(Observer observer);
+
+    void removeObserver(Observer observer);
+
+    void notifyAllObservers(String update);
 }
 
 // the subject
